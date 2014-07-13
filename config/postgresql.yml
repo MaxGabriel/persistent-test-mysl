@@ -1,0 +1,24 @@
+Default: &defaults
+  user: latestmy
+  password: latestmy
+  host: localhost
+  port: 5432
+  database: latestmy
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: latestmy_test
+  <<: *defaults
+
+Staging:
+  database: latestmy_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: latestmy_production
+  poolsize: 100
+  <<: *defaults
